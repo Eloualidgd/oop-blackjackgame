@@ -16,17 +16,19 @@ class Blackjack {
     const MAX = 11;
     const BJ_MAX = 21;
 
-   //return value (int)
+   //return value (int) number , entero zonder comas
+    // float: numero de coma flotante osea que te puede dar 1,5
     public function getScore(): int
     {
         return $this->score;
     }
     //method 1 random
-    //:void solamente significa q lo deje vacio pero no es importante
+    //:void solamente significa q lo deje vacio pero no es importante no te da nada
     public function Hit() :void
     {
         $hit = rand(self::MIN,self::MAX);
         //$this->score = $hit;
+        //optellen en onthouden (en waarden toewijzen)
         $this->score +=  $hit;
         echo $this->score;
 
@@ -41,6 +43,11 @@ class Blackjack {
     public function stand()
     {
         echo "stand";
+
+    }
+    public function win()
+    {
+        echo "you win";
 
     }
 }

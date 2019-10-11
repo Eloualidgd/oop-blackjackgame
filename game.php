@@ -15,6 +15,7 @@ echo "score: ". $_SESSION['player']->getScore()."<br>";
 
 $hit = $stand = $surrender = "";
 
+//wordt er op de knop geklikt (en welke)
 if(isset($_GET['hit'])) {
     if ($_SESSION['player']->getScore() < 21) {
         $_SESSION['player']->Hit();
@@ -23,9 +24,15 @@ if(isset($_GET['hit'])) {
 if(isset($_GET['stand'])) {
     $_SESSION['player']->Stand();
 }
+
 if(isset($_GET['surrender'])) {
     $_SESSION['player']->Surrender();
 }
+//if(isset($_GET['win'])) {
+  //  if ($_SESSION['player']->getScore() ==21)
+    //$_SESSION['player']->win();
+//}
+
 
 
 
